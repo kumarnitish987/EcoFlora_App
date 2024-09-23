@@ -1,6 +1,6 @@
 # Overview
 # EcoFlora App
-The EcoFlora App recommends plants suited to a user's local climate by analyzing their geographical location. It provides tailored plant suggestions and care tips, making gardening easier and more sustainable.
+The EcoFlora App is a smart plant recommendation tool that suggests ideal plants based on the user's geographical location. By leveraging GPS data and climate information, the app identifies plants that thrive in the local environment, considering factors like temperature, precipitation, etc. Users can input there geo location coordinates or any geo tagged image, while the app recommends plants suited to their region. It also offers tips on plant care, watering schedules, and seasonal advice, making gardening more accessible and eco-friendly for users in any climate.
 
 Needed .env file for backend:
 
