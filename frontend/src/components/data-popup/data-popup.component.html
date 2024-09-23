@@ -1,0 +1,43 @@
+<div class="modal">
+    <p>{{ responseData.Introduction }}</p>
+    <div class="results-container">
+    <table>
+        <thead>
+          <tr>
+            <th>Plants</th>
+            <th>Spices</th>
+            <th>Trees</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <table>
+                <tr *ngFor="let plant of responseData.Plants">
+                  <td>{{ plant.Name }}</td>
+                  <td>{{ plant.Maintenance }}</td>
+                </tr>
+              </table>
+            </td>
+            <td>
+              <table>
+                <tr *ngFor="let spice of responseData.Spices">
+                  <td>{{ spice.Name }}</td>
+                  <td>{{ spice.Maintenance }}</td>
+                </tr>
+              </table>
+            </td>
+            <td>
+              <table>
+                <tr *ngFor="let tree of responseData.Trees">
+                  <td>{{ tree.Name }}</td>
+                  <td>{{ tree.Maintenance }}</td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <button class="action-buttons button" (click)="close()">Close</button>
+</div>

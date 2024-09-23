@@ -1,0 +1,8 @@
+#packages required to be installed to run this application
+
+flask
+requests
+openai
+werkzeug.utils
+dotenv
+re

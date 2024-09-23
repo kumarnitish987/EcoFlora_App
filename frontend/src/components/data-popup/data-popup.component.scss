@@ -1,0 +1,62 @@
+.modal {
+    width: 90%;
+    height: 90%;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    background-color: rgba(99, 132, 167, 0.9);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    margin-top: -400px;
+    h3 {
+        text-align: center;
+        color: #333;
+      }
+}
+.action-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+  }
+  
+  .button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .button {
+    background-color: white;
+    color: black;
+    margin-left: 750px;
+  }
+  
+  .button:hover {
+    background-color: white;
+  }
+  .results-container table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .results-container th, .results-container td {
+    border: 1px solid #291b93;
+    padding: 8px;
+  }
+  
+  .results-container th {
+    background-color: #71a2cd;
+    text-align: left;
+  }
+  
+  .results-container td table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .results-container td table td {
+    border: none;
+    padding: 4px;
+  }

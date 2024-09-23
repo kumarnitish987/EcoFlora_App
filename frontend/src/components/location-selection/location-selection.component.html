@@ -1,0 +1,49 @@
+<div *ngIf="!showModal" class="coordinates-container">
+  <h3>Choose Your Location Method</h3>
+  <div class="location-method">
+    <label>
+      <input type="radio" [(ngModel)]="locationMethod" value="manual" (change)="toggleInputFields()" />
+      Enter Coordinates Manually
+    </label>
+    <label>
+      <input type="radio" [(ngModel)]="locationMethod" value="upload" (change)="toggleInputFields()" />
+      Upload Image
+    </label>
+  </div>
+
+  <div *ngIf="locationMethod === 'manual'">
+    <h3>Enter Coordinates</h3>
+    <div class="input-coordinates">
+      <label>
+        Latitude:
+        <input type="number" [(ngModel)]="inputLat" (input)="updateCoordinates()" placeholder="Enter Latitude" />
+      </label>
+      <label>
+        Longitude:
+        <input type="number" [(ngModel)]="inputLng" (input)="updateCoordinates()" placeholder="Enter Longitude" />
+      </label>
+    </div>
+    <div class="output-coordinates" *ngIf="selectedLat !== null && selectedLng !== null">
+      <p>Selected Location: Latitude: {{ selectedLat }}, Longitude: {{ selectedLng }}</p>
+      <button class="action-buttons button" (click)="SendCoordinates()">Submit</button>
+    </div>
+  </div>
+
+  <div *ngIf="locationMethod === 'upload'">
+    <h3>Upload Image</h3>
+    <input type="file" (change)="onFileSelected($event)" accept="image/*" />
+    <div *ngIf="imageSrc">
+      <h4>Preview:</h4>
+      <img [src]="imageSrc" alt="Uploaded Image" style="max-width: 100%; height: auto;" />
+      <button class="action-buttons button cancel-button-image" (click)="cancelImage()">Cancel</button>
+      <button class="action-buttons button submit-button-image" (click)="uploadImage()">Upload</button>
+    </div>
+  </div>
+</div>
+<div>
+  <app-data-popup 
+    *ngIf="showModal" 
+    [responseData]="responseData" 
+    (closeModal)="closeModal()"></app-data-popup>
+</div>
+
