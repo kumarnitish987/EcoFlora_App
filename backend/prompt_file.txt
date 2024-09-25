@@ -1,6 +1,4 @@
-Given the latitude: {latitude}, longitude : {longitude}, temperature : {temperature}, and precipitation: {precipitation} information of an area, provide a list of plants and trees that are native to that region and can thrive in those conditions. Additionally, include maintenance suggestions for each plant and tree. I will now send data in the format Longitude Latitude Temperature Precipitation. Please provide the response in the following format:
-IntroIntroduction: <introduction>
-Plants: <name>, <maintenance>,<name>, <maintenance>
-Trees: <name>, <maintenance>,<name>, <maintenance>
-Spices: <name>, <maintenance>,<name>, <maintenance>
+Given the latitude: {latitude}, longitude : {longitude}, temperature : {temperature}, and precipitation: {precipitation} information of an area, provide a list of plants and trees that are native to that region and can thrive in those conditions. Additionally, include maintenance suggestions for each plant and tree. I will now send data in the format Longitude Latitude Temperature Precipitation. Please provide a json formatted response in the following format:
+An Introduction
+Arrays of Plants, Trees and Spices where each array has objects with Name and Maintenance property
 It should show the data in layman terms and not include scientific names of plants
